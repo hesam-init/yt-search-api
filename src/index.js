@@ -20,7 +20,6 @@ app.options("*", cors());
 // server route:
 const buildPath = path.resolve(dirname("./"), "../client/build");
 app.use(express.static(buildPath));
-
 const indexPath = path.resolve(dirname("./"), "../client/build/index.html");
 app.get("/", (req, res) => {
   res.sendFile(indexPath);
